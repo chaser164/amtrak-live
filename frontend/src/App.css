@@ -24,6 +24,7 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   width: 10%; 
+  min-width: 130px;
   padding: 20px;
   background-color: #eeeeee; /* Light background for contrast */
   box-sizing: border-box;

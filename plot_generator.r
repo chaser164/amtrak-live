@@ -74,7 +74,7 @@ get_included_stations <- function(csv_paths, abbreviations) {
 }
 
 
-generate_train_schedule_plot <- function(csv_paths, bg=FALSE, main_plot=FALSE, show_scheduled=TRUE) {
+generate_train_schedule_plot <- function(csv_paths, img_id, bg=FALSE, main_plot=FALSE, show_scheduled=TRUE) {
   
   segment_end_time <- as.POSIXct(format(Sys.time(), tz = "America/New_York"), tz = "America/New_York")
   
@@ -237,22 +237,29 @@ generate_train_schedule_plot <- function(csv_paths, bg=FALSE, main_plot=FALSE, s
   }
 
   
-  ggsave(paste0("plots/", plot_file, "_plot.png"), plot = PLOT, width = 10, height = 6, dpi = 300)
+  ggsave(paste0("plots/", plot_file, "_plot_", img_id, ".png"), plot = PLOT, width = 10, height = 6, dpi = 300)
   
   # return(PLOT)
 }
 
+args <- commandArgs(trailingOnly = TRUE)
 
-# Get the list of CSV file paths in the directory
-csv_files <- list.files("train_data", pattern = "\\.csv$", full.names = TRUE)
-
-# main plot logic
-generate_train_schedule_plot(csv_files, bg=FALSE, main_plot=TRUE)
-generate_train_schedule_plot(csv_files, bg=TRUE, main_plot=TRUE)
-
-# individual plots logic
-for (csv_file in csv_files) {
-  generate_train_schedule_plot(csv_file, bg=FALSE)
-  generate_train_schedule_plot(csv_file, bg=TRUE)
+if (length(args) < 1)
+{
+  print("INVALID ARGUMENTS SUPPLIED")
+} else {
+  # Get the list of CSV file paths in the directory
+  csv_files <- list.files("train_data", pattern = "\\.csv$", full.names = TRUE)
+  
+  # main plot logic
+  generate_train_schedule_plot(csv_files, args[1], bg=FALSE, main_plot=TRUE)
+  generate_train_schedule_plot(csv_files, args[1], bg=TRUE, main_plot=TRUE)
+  
+  # individual plots logic
+  for (csv_file in csv_files) {
+    generate_train_schedule_plot(csv_file, args[1], bg=FALSE)
+    generate_train_schedule_plot(csv_file, args[1], bg=TRUE)
+  }
 }
+
 

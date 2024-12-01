@@ -2,6 +2,15 @@ import requests
 import csv
 import json
 from datetime import datetime
+import sys
+
+args = sys.argv
+
+if len(args) < 2:
+    print("invalid command line args")
+    sys.exit()
+
+img_id = args[1]
 
 r_colors = [
     "red", "blue", "green", "cyan", "magenta", "orange", "purple",
@@ -70,8 +79,8 @@ for train_id in train_data:
 color_idx = 0
 
 active_trains = [{'id': 'Combined', 
-                  'foreground_img': 'plots/main_plot.png',
-                  'background_img': 'plots/main_bg_plot.png',
+                  'foreground_img': f'plots/main_plot_{img_id}.png',
+                  'background_img': f'plots/main_bg_plot_{img_id}.png',
                   'animation_start': 100}]
 
 # Build Acela and Northeast Regional CSVs
@@ -120,8 +129,8 @@ for trains in [acelas, ners]:
 
         # Add to active_trains with "animation_start"
         active_trains.append({'id': f'{train["trainNum"]}', 
-                              'foreground_img': f'plots/{train["trainNum"]}_plot.png',
-                              'background_img': f'plots/{train["trainNum"]}_bg_plot.png',
+                              'foreground_img': f'plots/{train["trainNum"]}_plot_{img_id}.png',
+                              'background_img': f'plots/{train["trainNum"]}_bg_plot_{img_id}.png',
                               'animation_start': animation_start})
 
 # Write the JSON list
