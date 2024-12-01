@@ -44,15 +44,21 @@ function App() {
   };
 
   const handleTrainClick = (trainId) => {
+    // Clear the animation if it's running
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null; // Reset the interval reference
+    }
     // Find the clicked train and update the plot
     const selectedTrain = trainData.find(train => train.id === trainId);
     setCurrentPlot(selectedTrain);
+    setHiddenPercent(0);
   };
 
   return (
     <div className="app-container">
       <div className="train-links">
-      <button className="animate-button" onClick={() => handleAnimate(currentPlot?.animation_start - 7)}>
+      <button className="animate-button" onClick={() => handleAnimate(currentPlot?.animation_start * 0.93)}>
         Animate
       </button>
         {trainData.map((train) => (
