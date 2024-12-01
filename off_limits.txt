@@ -1,0 +1,8 @@
+STS
+WFD
+MDN
+BER
+HFD
+WND
+WNL
+SPG

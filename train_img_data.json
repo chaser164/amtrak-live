@@ -1,0 +1,140 @@
+[
+    {
+        "id": "Combined",
+        "foreground_img": "plots/main_plot.png",
+        "background_img": "plots/main_bg_plot.png",
+        "animation_start": 100
+    },
+    {
+        "id": "2226",
+        "foreground_img": "plots/2226_plot.png",
+        "background_img": "plots/2226_bg_plot.png",
+        "animation_start": 66.40316205533597
+    },
+    {
+        "id": "2228",
+        "foreground_img": "plots/2228_plot.png",
+        "background_img": "plots/2228_bg_plot.png",
+        "animation_start": 98.80952380952381
+    },
+    {
+        "id": "2258",
+        "foreground_img": "plots/2258_plot.png",
+        "background_img": "plots/2258_bg_plot.png",
+        "animation_start": 99.7584541062802
+    },
+    {
+        "id": "2259",
+        "foreground_img": "plots/2259_plot.png",
+        "background_img": "plots/2259_bg_plot.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "2264",
+        "foreground_img": "plots/2264_plot.png",
+        "background_img": "plots/2264_bg_plot.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "2275",
+        "foreground_img": "plots/2275_plot.png",
+        "background_img": "plots/2275_bg_plot.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "65",
+        "foreground_img": "plots/65_plot.png",
+        "background_img": "plots/65_bg_plot.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "66",
+        "foreground_img": "plots/66_plot.png",
+        "background_img": "plots/66_bg_plot.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "87",
+        "foreground_img": "plots/87_plot.png",
+        "background_img": "plots/87_bg_plot.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "99",
+        "foreground_img": "plots/99_plot.png",
+        "background_img": "plots/99_bg_plot.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "108",
+        "foreground_img": "plots/108_plot.png",
+        "background_img": "plots/108_bg_plot.png",
+        "animation_start": 98.56459330143541
+    },
+    {
+        "id": "123",
+        "foreground_img": "plots/123_plot.png",
+        "background_img": "plots/123_bg_plot.png",
+        "animation_start": 98.9247311827957
+    },
+    {
+        "id": "124",
+        "foreground_img": "plots/124_plot.png",
+        "background_img": "plots/124_bg_plot.png",
+        "animation_start": 69.97084548104957
+    },
+    {
+        "id": "128",
+        "foreground_img": "plots/128_plot.png",
+        "background_img": "plots/128_bg_plot.png",
+        "animation_start": 98.49246231155779
+    },
+    {
+        "id": "132",
+        "foreground_img": "plots/132_plot.png",
+        "background_img": "plots/132_bg_plot.png",
+        "animation_start": 99.61832061068702
+    },
+    {
+        "id": "139",
+        "foreground_img": "plots/139_plot.png",
+        "background_img": "plots/139_bg_plot.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "146",
+        "foreground_img": "plots/146_plot.png",
+        "background_img": "plots/146_bg_plot.png",
+        "animation_start": 99.6969696969697
+    },
+    {
+        "id": "157",
+        "foreground_img": "plots/157_plot.png",
+        "background_img": "plots/157_bg_plot.png",
+        "animation_start": 95.83333333333333
+    },
+    {
+        "id": "158",
+        "foreground_img": "plots/158_plot.png",
+        "background_img": "plots/158_bg_plot.png",
+        "animation_start": 60.67708333333333
+    },
+    {
+        "id": "165",
+        "foreground_img": "plots/165_plot.png",
+        "background_img": "plots/165_bg_plot.png",
+        "animation_start": 97.4559686888454
+    },
+    {
+        "id": "166",
+        "foreground_img": "plots/166_plot.png",
+        "background_img": "plots/166_bg_plot.png",
+        "animation_start": 87.33333333333333
+    },
+    {
+        "id": "169",
+        "foreground_img": "plots/169_plot.png",
+        "background_img": "plots/169_bg_plot.png",
+        "animation_start": 98.86363636363636
+    }
+]

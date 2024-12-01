@@ -1,0 +1,98 @@
+/* General Body and Container Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main Container: Flexbox for Two Column Layout */
+.app-container {
+  display: flex;
+  justify-content: space-between; /* Space between the left and right sections */
+  width: 100vw;
+  height: 100vh; /* Limit the height for a better overall view */
+}
+
+/* Left Column (Train List) */
+.train-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 10%; 
+  padding: 20px;
+  background-color: #eeeeee; /* Light background for contrast */
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.train-button {
+  margin-bottom: 15px; /* Add space between buttons */
+  padding: 0; /* Remove padding to make it look like a link */
+  background: none; /* Remove background */
+  color: #007bff; /* Set color to blue to match typical links */
+  text-decoration: none; /* Remove underline */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Optional: Adjust font size */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Highlighted Button (when selected) */
+.train-button.highlighted {
+  color: #0056b3; /* Change color when highlighted */
+  font-weight: bold; /* Make the text bold when selected */
+}
+
+/* Link Hover Effect */
+.train-button:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline; /* Underline the link on hover */
+}
+
+/* Right Column (Images) */
+.image-container {
+  position: relative;
+  width: 98%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; /* White background for the image container */
+  box-sizing: border-box;
+  overflow: hidden; /* Ensure images don’t overflow */
+}
+
+.background-image,
+.foreground-image {
+  position: absolute;
+  width: 90%; /* Adjust width as needed */
+}
+
+.foreground-image {
+  z-index: 1;
+}
+
+.background-image {
+  z-index: 0;
+}
+
+/* Animation Button Styles */
+.animate-button {
+  padding: 10px 20px;
+  margin-bottom: 40px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.animate-button:hover {
+  background-color: #0056b3;
+}
