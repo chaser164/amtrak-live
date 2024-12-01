@@ -5,7 +5,8 @@ function App() {
   const [hiddenPercent, setHiddenPercent] = useState(0);
   const intervalRef = useRef(null); // Ref to track the interval ID
   const [trainData, setTrainData] = useState([]); // State to store the list of trains
-  const [currentPlot, setCurrentPlot] = useState("Combined"); // Store the current plot data
+  const [currentPlot, setCurrentPlot] = useState(null); // Store the current plot data
+  const [initialLoad, setInitialLoad] = useState(true);
 
   // Fetch train data from the backend API
   useEffect(() => {
@@ -14,14 +15,19 @@ function App() {
         const response = await fetch('http://127.0.0.1:5000/api/trains');
         const data = await response.json();
         setTrainData(data); // Update state with the received train data
-        setCurrentPlot(data[0]); // Set the default plot to the first one
+        if (initialLoad) {
+          setCurrentPlot(data[0]);
+          setInitialLoad(false);
+        }
+        
       } catch (error) {
         console.error('Error fetching train data:', error);
       }
     };
 
     fetchTrainData();
-  }, []); // This will run once when the component mounts
+    console.log("data fetched!");
+  }, [currentPlot]); // This will run once when the component mounts
 
   const handleAnimate = (start) => {
     // Clear any existing interval to prevent multiple animations
