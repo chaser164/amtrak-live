@@ -1,3 +1,21 @@
+#!/bin/bash
+
+LOCKFILE="/tmp/marey_update.lock"
+
+# Check if the lock file exists
+if [ -e "$LOCKFILE" ]; then
+    echo "Script is already running. Exiting."
+    exit 1
+fi
+
+cd /home/ec2-user/marey-live
+
+# Create the lock file
+touch "$LOCKFILE"
+
+# Ensure the lock file is removed on script exit or termination
+trap "rm -f $LOCKFILE" EXIT
+
 img_id=$(date +"%S%M%H%d%m%Y")
 rm -rf train_data
 mkdir train_data

@@ -1,6 +1,8 @@
 import './App.css';
 import { useState, useRef, useEffect } from 'react';
 
+const URL = 'http://18.117.100.93/';
+
 function App() {
   const [hiddenPercent, setHiddenPercent] = useState(0);
   const intervalRef = useRef(null); // Ref to track the interval ID
@@ -12,7 +14,7 @@ function App() {
   useEffect(() => {
     const fetchTrainData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5000/api/trains');
+        const response = await fetch(URL + "api/trains/");
         const data = await response.json();
         setTrainData(data); // Update state with the received train data
         if (initialLoad) {
@@ -83,12 +85,12 @@ function App() {
         {currentPlot && (
           <>
             <img
-              src={`http://127.0.0.1:5000/${currentPlot.background_img}`}
+              src={URL + currentPlot.background_img}
               alt="Background Plot"
               className="background-image"
             />
             <img
-              src={`http://127.0.0.1:5000/${currentPlot.foreground_img}`}
+              src={URL + currentPlot.foreground_img}
               alt="Foreground Plot"
               style={{ clipPath: `inset(0 ${hiddenPercent}% 0 0)` }}
               className="foreground-image"
