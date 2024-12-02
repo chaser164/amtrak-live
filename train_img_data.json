@@ -1,212 +1,146 @@
 [
     {
         "id": "Combined",
-        "foreground_img": "plots/main_plot_07341701122024.png",
-        "background_img": "plots/main_bg_plot_07341701122024.png",
+        "foreground_img": "plots/main_plot_40050302122024.png",
+        "background_img": "plots/main_bg_plot_40050302122024.png",
         "animation_start": 100
     },
     {
-        "id": "2252",
-        "foreground_img": "plots/2252_plot_07341701122024.png",
-        "background_img": "plots/2252_bg_plot_07341701122024.png",
-        "animation_start": 96.88249400479616
+        "id": "2226",
+        "foreground_img": "plots/2226_plot_40050302122024.png",
+        "background_img": "plots/2226_bg_plot_40050302122024.png",
+        "animation_start": 99.4047619047619
     },
     {
-        "id": "2253",
-        "foreground_img": "plots/2253_plot_07341701122024.png",
-        "background_img": "plots/2253_bg_plot_07341701122024.png",
-        "animation_start": 94.17040358744394
-    },
-    {
-        "id": "2254",
-        "foreground_img": "plots/2254_plot_07341701122024.png",
-        "background_img": "plots/2254_bg_plot_07341701122024.png",
-        "animation_start": 100.0
-    },
-    {
-        "id": "2255",
-        "foreground_img": "plots/2255_plot_07341701122024.png",
-        "background_img": "plots/2255_bg_plot_07341701122024.png",
-        "animation_start": 100.0
-    },
-    {
-        "id": "2257",
-        "foreground_img": "plots/2257_plot_07341701122024.png",
-        "background_img": "plots/2257_bg_plot_07341701122024.png",
-        "animation_start": 100.0
+        "id": "2228",
+        "foreground_img": "plots/2228_plot_40050302122024.png",
+        "background_img": "plots/2228_bg_plot_40050302122024.png",
+        "animation_start": 92.77777777777777
     },
     {
         "id": "2258",
-        "foreground_img": "plots/2258_plot_07341701122024.png",
-        "background_img": "plots/2258_bg_plot_07341701122024.png",
+        "foreground_img": "plots/2258_plot_40050302122024.png",
+        "background_img": "plots/2258_bg_plot_40050302122024.png",
         "animation_start": 99.50980392156863
     },
     {
         "id": "2259",
-        "foreground_img": "plots/2259_plot_07341701122024.png",
-        "background_img": "plots/2259_bg_plot_07341701122024.png",
-        "animation_start": 99.76133651551312
+        "foreground_img": "plots/2259_plot_40050302122024.png",
+        "background_img": "plots/2259_bg_plot_40050302122024.png",
+        "animation_start": 100.0
     },
     {
         "id": "2262",
-        "foreground_img": "plots/2262_plot_07341701122024.png",
-        "background_img": "plots/2262_bg_plot_07341701122024.png",
+        "foreground_img": "plots/2262_plot_40050302122024.png",
+        "background_img": "plots/2262_bg_plot_40050302122024.png",
         "animation_start": 99.76076555023923
     },
     {
+        "id": "2264",
+        "foreground_img": "plots/2264_plot_40050302122024.png",
+        "background_img": "plots/2264_bg_plot_40050302122024.png",
+        "animation_start": 99.73544973544973
+    },
+    {
         "id": "2275",
-        "foreground_img": "plots/2275_plot_07341701122024.png",
-        "background_img": "plots/2275_bg_plot_07341701122024.png",
+        "foreground_img": "plots/2275_plot_40050302122024.png",
+        "background_img": "plots/2275_bg_plot_40050302122024.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "2277",
+        "foreground_img": "plots/2277_plot_40050302122024.png",
+        "background_img": "plots/2277_bg_plot_40050302122024.png",
         "animation_start": 100.0
     },
     {
         "id": "66",
-        "foreground_img": "plots/66_plot_07341701122024.png",
-        "background_img": "plots/66_bg_plot_07341701122024.png",
+        "foreground_img": "plots/66_plot_40050302122024.png",
+        "background_img": "plots/66_bg_plot_40050302122024.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "67",
+        "foreground_img": "plots/67_plot_40050302122024.png",
+        "background_img": "plots/67_bg_plot_40050302122024.png",
         "animation_start": 100.0
     },
     {
         "id": "87",
-        "foreground_img": "plots/87_plot_07341701122024.png",
-        "background_img": "plots/87_bg_plot_07341701122024.png",
+        "foreground_img": "plots/87_plot_40050302122024.png",
+        "background_img": "plots/87_bg_plot_40050302122024.png",
         "animation_start": 100.0
-    },
-    {
-        "id": "88",
-        "foreground_img": "plots/88_plot_07341701122024.png",
-        "background_img": "plots/88_bg_plot_07341701122024.png",
-        "animation_start": 100.0
-    },
-    {
-        "id": "96",
-        "foreground_img": "plots/96_plot_07341701122024.png",
-        "background_img": "plots/96_bg_plot_07341701122024.png",
-        "animation_start": 96.0
     },
     {
         "id": "99",
-        "foreground_img": "plots/99_plot_07341701122024.png",
-        "background_img": "plots/99_bg_plot_07341701122024.png",
+        "foreground_img": "plots/99_plot_40050302122024.png",
+        "background_img": "plots/99_bg_plot_40050302122024.png",
         "animation_start": 100.0
     },
     {
-        "id": "106",
-        "foreground_img": "plots/106_plot_07341701122024.png",
-        "background_img": "plots/106_bg_plot_07341701122024.png",
-        "animation_start": 95.65217391304348
+        "id": "108",
+        "foreground_img": "plots/108_plot_40050302122024.png",
+        "background_img": "plots/108_bg_plot_40050302122024.png",
+        "animation_start": 97.58454106280193
     },
     {
-        "id": "122",
-        "foreground_img": "plots/122_plot_07341701122024.png",
-        "background_img": "plots/122_bg_plot_07341701122024.png",
-        "animation_start": 98.9795918367347
+        "id": "123",
+        "foreground_img": "plots/123_plot_40050302122024.png",
+        "background_img": "plots/123_bg_plot_40050302122024.png",
+        "animation_start": 100.0
     },
     {
         "id": "124",
-        "foreground_img": "plots/124_plot_07341701122024.png",
-        "background_img": "plots/124_bg_plot_07341701122024.png",
+        "foreground_img": "plots/124_plot_40050302122024.png",
+        "background_img": "plots/124_bg_plot_40050302122024.png",
         "animation_start": 100.0
+    },
+    {
+        "id": "128",
+        "foreground_img": "plots/128_plot_40050302122024.png",
+        "background_img": "plots/128_bg_plot_40050302122024.png",
+        "animation_start": 86.15384615384616
     },
     {
         "id": "132",
-        "foreground_img": "plots/132_plot_07341701122024.png",
-        "background_img": "plots/132_bg_plot_07341701122024.png",
+        "foreground_img": "plots/132_plot_40050302122024.png",
+        "background_img": "plots/132_bg_plot_40050302122024.png",
         "animation_start": 100.0
-    },
-    {
-        "id": "135",
-        "foreground_img": "plots/135_plot_07341701122024.png",
-        "background_img": "plots/135_bg_plot_07341701122024.png",
-        "animation_start": 99.79123173277662
     },
     {
         "id": "139",
-        "foreground_img": "plots/139_plot_07341701122024.png",
-        "background_img": "plots/139_bg_plot_07341701122024.png",
-        "animation_start": 100.0
-    },
-    {
-        "id": "140",
-        "foreground_img": "plots/140_plot_07341701122024.png",
-        "background_img": "plots/140_bg_plot_07341701122024.png",
+        "foreground_img": "plots/139_plot_40050302122024.png",
+        "background_img": "plots/139_bg_plot_40050302122024.png",
         "animation_start": 100.0
     },
     {
         "id": "145",
-        "foreground_img": "plots/145_plot_07341701122024.png",
-        "background_img": "plots/145_bg_plot_07341701122024.png",
+        "foreground_img": "plots/145_plot_40050302122024.png",
+        "background_img": "plots/145_bg_plot_40050302122024.png",
         "animation_start": 100.0
     },
     {
         "id": "146",
-        "foreground_img": "plots/146_plot_07341701122024.png",
-        "background_img": "plots/146_bg_plot_07341701122024.png",
+        "foreground_img": "plots/146_plot_40050302122024.png",
+        "background_img": "plots/146_bg_plot_40050302122024.png",
         "animation_start": 99.69604863221885
     },
     {
-        "id": "149",
-        "foreground_img": "plots/149_plot_07341701122024.png",
-        "background_img": "plots/149_bg_plot_07341701122024.png",
-        "animation_start": 99.40944881889764
-    },
-    {
-        "id": "154",
-        "foreground_img": "plots/154_plot_07341701122024.png",
-        "background_img": "plots/154_bg_plot_07341701122024.png",
-        "animation_start": 100.0
-    },
-    {
-        "id": "156",
-        "foreground_img": "plots/156_plot_07341701122024.png",
-        "background_img": "plots/156_bg_plot_07341701122024.png",
-        "animation_start": 87.91208791208791
-    },
-    {
-        "id": "157",
-        "foreground_img": "plots/157_plot_07341701122024.png",
-        "background_img": "plots/157_bg_plot_07341701122024.png",
-        "animation_start": 95.51122194513715
-    },
-    {
-        "id": "158",
-        "foreground_img": "plots/158_plot_07341701122024.png",
-        "background_img": "plots/158_bg_plot_07341701122024.png",
-        "animation_start": 98.36065573770492
-    },
-    {
-        "id": "161",
-        "foreground_img": "plots/161_plot_07341701122024.png",
-        "background_img": "plots/161_bg_plot_07341701122024.png",
-        "animation_start": 100.0
-    },
-    {
-        "id": "164",
-        "foreground_img": "plots/164_plot_07341701122024.png",
-        "background_img": "plots/164_bg_plot_07341701122024.png",
-        "animation_start": 100.0
-    },
-    {
         "id": "165",
-        "foreground_img": "plots/165_plot_07341701122024.png",
-        "background_img": "plots/165_bg_plot_07341701122024.png",
+        "foreground_img": "plots/165_plot_40050302122024.png",
+        "background_img": "plots/165_bg_plot_40050302122024.png",
         "animation_start": 100.0
     },
     {
         "id": "166",
-        "foreground_img": "plots/166_plot_07341701122024.png",
-        "background_img": "plots/166_bg_plot_07341701122024.png",
-        "animation_start": 99.36974789915966
+        "foreground_img": "plots/166_plot_40050302122024.png",
+        "background_img": "plots/166_bg_plot_40050302122024.png",
+        "animation_start": 99.78991596638656
     },
     {
-        "id": "189",
-        "foreground_img": "plots/189_plot_07341701122024.png",
-        "background_img": "plots/189_bg_plot_07341701122024.png",
-        "animation_start": 100.0
-    },
-    {
-        "id": "195",
-        "foreground_img": "plots/195_plot_07341701122024.png",
-        "background_img": "plots/195_bg_plot_07341701122024.png",
-        "animation_start": 100.0
+        "id": "169",
+        "foreground_img": "plots/169_plot_40050302122024.png",
+        "background_img": "plots/169_bg_plot_40050302122024.png",
+        "animation_start": 99.7159090909091
     }
 ]
