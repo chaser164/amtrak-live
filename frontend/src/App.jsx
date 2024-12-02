@@ -8,28 +8,24 @@ function App() {
   const intervalRef = useRef(null); // Ref to track the interval ID
   const [trainData, setTrainData] = useState([]); // State to store the list of trains
   const [currentPlot, setCurrentPlot] = useState(null); // Store the current plot data
-  const [initialLoad, setInitialLoad] = useState(true);
 
-  // Fetch train data from the backend API
+  // Fetch train data on initial load
   useEffect(() => {
     const fetchTrainData = async () => {
       try {
-        const response = await fetch(URL + "api/trains/");
+        const response = await fetch(URL + 'api/trains/');
         const data = await response.json();
         setTrainData(data); // Update state with the received train data
-        if (initialLoad) {
-          setCurrentPlot(data[0]);
-          setInitialLoad(false);
+        if (data.length > 0) {
+          setCurrentPlot(data[0]); // Set the first train as the initial plot
         }
-        
       } catch (error) {
         console.error('Error fetching train data:', error);
       }
     };
 
-    fetchTrainData();
-    console.log("data fetched!");
-  }, [currentPlot]); // This will run once when the component mounts
+    fetchTrainData(); // Fetch data once on initial load
+  }, []); // Empty dependency array ensures this runs once
 
   const handleAnimate = (start) => {
     // Clear any existing interval to prevent multiple animations
@@ -37,7 +33,7 @@ function App() {
       clearInterval(intervalRef.current);
     }
 
-    setHiddenPercent(start); // Start at 100%
+    setHiddenPercent(start); // Start animation at the given percent
 
     intervalRef.current = setInterval(() => {
       setHiddenPercent((prev) => {
@@ -51,24 +47,39 @@ function App() {
     }, 18); // Adjust the interval (in milliseconds) to control the speed
   };
 
-  const handleTrainClick = (trainId) => {
+  const handleTrainClick = async (trainId) => {
     // Clear the animation if it's running
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
       intervalRef.current = null; // Reset the interval reference
     }
-    // Find the clicked train and update the plot
-    const selectedTrain = trainData.find(train => train.id === trainId);
-    setCurrentPlot(selectedTrain);
-    setHiddenPercent(0);
+
+    try {
+      const response = await fetch(URL + 'api/trains/');
+      const data = await response.json();
+      setTrainData(data); // Refresh train data
+
+      // Find the clicked train and update the plot
+      const selectedTrain = data.find((train) => train.id === trainId);
+      if (selectedTrain) {
+        setCurrentPlot(selectedTrain); // Update current plot
+      }
+      setHiddenPercent(0);
+    } catch (error) {
+      console.error('Error fetching train data on click:', error);
+      setHiddenPercent(0);
+    }
   };
 
   return (
     <div className="app-container">
       <div className="train-links">
-      <button className="animate-button" onClick={() => handleAnimate(currentPlot?.animation_start * 0.93)}>
-        Animate
-      </button>
+        <button
+          className="animate-button"
+          onClick={() => handleAnimate(currentPlot?.animation_start * 0.93)}
+        >
+          Animate
+        </button>
         {trainData.map((train) => (
           <button
             key={train.id}
