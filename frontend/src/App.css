@@ -24,11 +24,15 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   width: 10%; 
-  min-width: 130px;
+  min-width: 160px;
   padding: 20px;
   background-color: #eeeeee; /* Light background for contrast */
   box-sizing: border-box;
   overflow-y: auto;
+}
+
+#plots-label {
+  text-decoration: underline;
 }
 
 .train-button {
@@ -85,7 +89,8 @@ body {
 /* Animation Button Styles */
 .animate-button {
   padding: 10px 20px;
-  margin-bottom: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   background-color: #007bff;
   color: white;
   border: none;
