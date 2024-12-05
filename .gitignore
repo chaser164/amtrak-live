@@ -6,6 +6,7 @@ train_data/*
 marey-live-ssh.pem
 .Rhistory
 .RData
+train_img_data.json
 
 # frontend
 
