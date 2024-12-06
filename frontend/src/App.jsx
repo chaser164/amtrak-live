@@ -1,7 +1,7 @@
 import './App.css';
 import { useState, useRef, useEffect } from 'react';
 
-const URL = 'http://18.117.100.93/';
+const URL = 'https://amtraklive.com/';
 
 function App() {
   const [hiddenPercent, setHiddenPercent] = useState(0);
