@@ -74,7 +74,7 @@ get_included_stations <- function(csv_paths, abbreviations) {
 }
 
 
-generate_train_schedule_plot <- function(csv_paths, img_id, bg=FALSE, main_plot=FALSE, show_scheduled=TRUE) {
+generate_train_schedule_plot <- function(csv_paths, img_id, bg=FALSE, show_scheduled=TRUE, specifier="") {
   
   segment_end_time <- as.POSIXct(format(Sys.time(), tz = "America/New_York"), tz = "America/New_York")
   
@@ -233,16 +233,24 @@ generate_train_schedule_plot <- function(csv_paths, img_id, bg=FALSE, main_plot=
       panel.background = element_rect(fill = "white", color = NA),
     ) +
   scale_color_manual(values = setNames(train_line_colors, train_line_labels)) +
-    labs(x = "Time", y = "Station", title = ifelse(length(csv_paths) > 1, "Live Northeast Corridor Amtrak Marey-Style Plot", paste("Live Amtrak Marey-Style Plot for Train", train_line_label)), color = "Train Number")
+    labs(x = "Time", y = "Station", title = ifelse(length(csv_paths) > 1, paste("Live Amtrak Northeast Corridor Plot", specifier), paste("Live Plot for Amtrak Train", train_line_label)), color = "Train Number")
   
   if(show_scheduled) {
     PLOT <- PLOT + geom_vline(xintercept = as.numeric(segment_end_time), linetype = "solid", color = "black", linewidth = 0.5)
   }
-  
+
   plot_file <- train_line_label
-  if (main_plot)
+  if (specifier == "All Trains")
   {
     plot_file <- "main"
+  } else if (specifier == "Northbound")
+  {
+    plot_file <- "north"
+  } else if (specifier == "Southbound")
+  {
+    plot_file <- "south"
+  } else if (length(specifier) > 1){
+    stop("Invalid specifier supplied")
   }
   
   if (bg)
@@ -266,8 +274,8 @@ if (length(args) < 1)
   csv_files <- list.files("train_data", pattern = "\\.csv$", full.names = TRUE)
   
   # main plot logic
-  generate_train_schedule_plot(csv_files, args[1], bg=FALSE, main_plot=TRUE)
-  generate_train_schedule_plot(csv_files, args[1], bg=TRUE, main_plot=TRUE)
+  generate_train_schedule_plot(csv_files, args[1], bg=FALSE, specifier="All Trains")
+  generate_train_schedule_plot(csv_files, args[1], bg=TRUE, specifier="All Trains")
   
   # individual plots logic
   for (csv_file in csv_files) {
