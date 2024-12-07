@@ -6,6 +6,6 @@ Built with R, Python, and React.
 
 This website is a final project for *Political Science 349: Visualization of Political and Social Data* taught by Professor Alexander Coppock at Yale.
 
-# Sources
+# Resources
 - [v3 Amtracker API](https://github.com/piemadd/amtraker-v3)
 - [Timetables for station distances](https://www.narprail.org/site/assets/files/20928/nec-bos-was-1.pdf)
