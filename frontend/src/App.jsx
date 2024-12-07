@@ -75,7 +75,6 @@ function App() {
     <div className="app-container">
       <div className="train-links">
         <h1><em>Amtrak Live</em></h1>
-        <a href="https://www.researchgate.net/figure/Graphical-train-schedule-E-J-Mareys-1878-graphical-train-schedule-showing-all_fig9_332643897" target="_blank" rel="noreferrer">Inspiration</a>
         <button
           className="animate-button"
           onClick={() => handleAnimate(currentPlot?.animation_start * 0.885)}
