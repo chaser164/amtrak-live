@@ -78,7 +78,7 @@ function App() {
         <a href="https://www.researchgate.net/figure/Graphical-train-schedule-E-J-Mareys-1878-graphical-train-schedule-showing-all_fig9_332643897" target="_blank" rel="noreferrer">Inspiration</a>
         <button
           className="animate-button"
-          onClick={() => handleAnimate(currentPlot?.animation_start * 0.93)}
+          onClick={() => handleAnimate(currentPlot?.animation_start * 0.885)}
         >
           Animate
         </button>

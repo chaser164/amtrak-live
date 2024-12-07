@@ -25,7 +25,7 @@ r_colors = [
 
 allowed_stations = {
     "WAS", "NCR", "BWI", "BAL", "ABE", "NRK", 
-    "WIL", "PHL", "PHN", "TRE", "PJC", "NBK", 
+    "WIL", "PHL", "PHN","CWH", "TRE", "PJC", "NBK", 
     "MET", "EWR", "NWK", "NYP", "NRO", "STM", 
     "BRP", "NHV", "OSB", "NLC", "MYS", "WLY", 
     "KIN", "PVD", "RTE", "BBY", "BOS"

@@ -41,7 +41,7 @@ create_segment <- function(x_start, y_start, x_end, y_end, segment_end_time, sta
 
 abbreviations <- c("WAS", "NCR", "BWI", 
                    "BAL", "ABE", "NRK", 
-                   "WIL", "PHL", "PHN", 
+                   "WIL", "PHL", "PHN", "CWH", 
                    "TRE", "PJC", "NBK", 
                    "MET", "EWR", "NWK", 
                    "NYP", "NRO", "STM", 
@@ -187,6 +187,19 @@ generate_train_schedule_plot <- function(csv_paths, img_id, bg=FALSE, main_plot=
   actual_segments_df <- bind_rows(all_actual_segments)
   scheduled_segments_df <- bind_rows(all_scheduled_segments)
   
+  station_distances <- c(
+    WAS = 0, NCR = 9, BWI = 30, BAL = 41, ABE = 71, NRK = 98,
+    WIL = 110, PHL = 135, PHN = 139, CWH = 152, TRE = 168, PJC = 178, NBK = 194,
+    MET = 202, EWR = 213, NWK = 216, NYP = 226, NRO = 245, STM = 262,
+    BRP = 284, NHV = 301, OSB = 334, NLC = 352, MYS = 361, WLY = 370,
+    KIN = 387, PVD = 414, RTE = 446, BBY = 456, BOS = 457
+  )
+  
+  actual_segments_df$y_start <- station_distances[included_stations[actual_segments_df$y_start]]
+  actual_segments_df$y_new <- station_distances[included_stations[actual_segments_df$y_new]]
+  scheduled_segments_df$y_start <- station_distances[included_stations[scheduled_segments_df$y_start]]
+  scheduled_segments_df$y_new <- station_distances[included_stations[scheduled_segments_df$y_new]]
+
   # Add all segments to the plot
   if(show_scheduled) {
     PLOT <- PLOT + geom_segment(aes(x = x_start, y = y_start, xend = x_new, yend = y_new, color = "black"),
@@ -207,8 +220,9 @@ generate_train_schedule_plot <- function(csv_paths, img_id, bg=FALSE, main_plot=
       labels = scales::date_format("%H:%M", tz = "America/New_York")
     ) + # Add vertical black line
     scale_y_continuous(
-      breaks = 1:length(included_stations),
-      labels = included_stations
+      breaks = station_distances[included_stations],
+      labels = included_stations,
+      guide = guide_axis(n.dodge = 2)
     ) +
     theme_minimal() +
     theme(
