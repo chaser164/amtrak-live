@@ -90,6 +90,12 @@ function App() {
             {`${train.id}`}
           </button>
         ))}
+              <div className="footer">
+        <p>
+          Data provided by <a href="https://github.com/piemadd/amtrak" target="_blank" rel="noopener noreferrer">Piero Maddaleni's Amtrak API</a>. 
+          This site makes no guarantees for data accuracy. Use at your own risk.
+        </p>
+      </div>
       </div>
 
       <div className="image-container">

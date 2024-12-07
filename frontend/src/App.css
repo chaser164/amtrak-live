@@ -102,3 +102,21 @@ body {
 .animate-button:hover {
   background-color: #0056b3;
 }
+
+.footer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9em;
+  background-color: #f8f9fa;
+  border-top: 1px solid #ddd;
+  position: sticky;
+  bottom: 0;
+}
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
