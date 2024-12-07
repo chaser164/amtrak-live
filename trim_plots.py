@@ -22,10 +22,11 @@ def main():
     search_string = sys.argv[1]
     
     # Set the directory to "plots"
-    directory = "plots"
+    directories = ["plots/north", "plots/south"]
     
     # Delete files without the search string
-    delete_files_without_string(directory, search_string)
+    for directory in directories:
+        delete_files_without_string(directory, search_string)
 
 if __name__ == "__main__":
     main()

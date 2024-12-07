@@ -271,11 +271,19 @@ if (length(args) < 1)
   print("INVALID ARGUMENTS SUPPLIED")
 } else {
   # Get the list of CSV file paths in the directory
-  csv_files <- list.files("train_data", pattern = "\\.csv$", full.names = TRUE)
+  north_csv_files <- list.files("train_data/north", pattern = "\\.csv$", full.names = TRUE)
+  south_csv_files <- list.files("train_data/south", pattern = "\\.csv$", full.names = TRUE)
+  csv_files <- c(north_csv_files, south_csv_files)
   
   # main plot logic
   generate_train_schedule_plot(csv_files, args[1], bg=FALSE, specifier="All Trains")
   generate_train_schedule_plot(csv_files, args[1], bg=TRUE, specifier="All Trains")
+
+  # northbound and southbound
+  generate_train_schedule_plot(north_csv_files, args[1], bg=FALSE, specifier="Northbound")
+  generate_train_schedule_plot(north_csv_files, args[1], bg=TRUE, specifier="Northbound")
+  generate_train_schedule_plot(south_csv_files, args[1], bg=FALSE, specifier="Southbound")
+  generate_train_schedule_plot(south_csv_files, args[1], bg=TRUE, specifier="Southbound")
   
   # individual plots logic
   for (csv_file in csv_files) {

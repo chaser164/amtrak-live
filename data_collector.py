@@ -78,15 +78,23 @@ for train_id in train_data:
 
 color_idx = 0
 
-active_trains = [{'id': 'Combined', 
+active_trains = [{'id': 'All Trains', 
                   'foreground_img': f'plots/main_plot_{img_id}.png',
                   'background_img': f'plots/main_bg_plot_{img_id}.png',
+                  'animation_start': 100},
+                  {'id': 'Northbound', 
+                  'foreground_img': f'plots/north_plot_{img_id}.png',
+                  'background_img': f'plots/north_bg_plot_{img_id}.png',
+                  'animation_start': 100},
+                  {'id': 'Southbound', 
+                  'foreground_img': f'plots/south_plot_{img_id}.png',
+                  'background_img': f'plots/south_bg_plot_{img_id}.png',
                   'animation_start': 100}]
 
 # Build Acela and Northeast Regional CSVs
 for trains in [acelas, ners]:
     for train in trains:
-        filename = f'train_data/{train["trainNum"]}_{r_colors[color_idx % len(r_colors)]}.csv'
+        filename = f'train_data/{"north" if int(train["trainNum"]) % 2 == 0 else "south"}/{train["trainNum"]}_{r_colors[color_idx % len(r_colors)]}.csv'
         color_idx += 1
         schedule_data = []
         

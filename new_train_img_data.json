@@ -1,0 +1,188 @@
+[
+    {
+        "id": "All Trains",
+        "foreground_img": "plots/main_plot_123.png",
+        "background_img": "plots/main_bg_plot_123.png",
+        "animation_start": 100
+    },
+    {
+        "id": "Northbound",
+        "foreground_img": "plots/north_plot_123.png",
+        "background_img": "plots/north_bg_plot_123.png",
+        "animation_start": 100
+    },
+    {
+        "id": "Southbound",
+        "foreground_img": "plots/south_plot_123.png",
+        "background_img": "plots/south_bg_plot_123.png",
+        "animation_start": 100
+    },
+    {
+        "id": "2216",
+        "foreground_img": "plots/2216_plot_123.png",
+        "background_img": "plots/2216_bg_plot_123.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "2218",
+        "foreground_img": "plots/2218_plot_123.png",
+        "background_img": "plots/2218_bg_plot_123.png",
+        "animation_start": 99.42528735632185
+    },
+    {
+        "id": "2252",
+        "foreground_img": "plots/2252_plot_123.png",
+        "background_img": "plots/2252_bg_plot_123.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "2253",
+        "foreground_img": "plots/2253_plot_123.png",
+        "background_img": "plots/2253_bg_plot_123.png",
+        "animation_start": 94.84304932735427
+    },
+    {
+        "id": "2254",
+        "foreground_img": "plots/2254_plot_123.png",
+        "background_img": "plots/2254_bg_plot_123.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "2255",
+        "foreground_img": "plots/2255_plot_123.png",
+        "background_img": "plots/2255_bg_plot_123.png",
+        "animation_start": 99.75786924939467
+    },
+    {
+        "id": "66",
+        "foreground_img": "plots/66_plot_123.png",
+        "background_img": "plots/66_bg_plot_123.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "82",
+        "foreground_img": "plots/82_plot_123.png",
+        "background_img": "plots/82_bg_plot_123.png",
+        "animation_start": 95.87242026266416
+    },
+    {
+        "id": "87",
+        "foreground_img": "plots/87_plot_123.png",
+        "background_img": "plots/87_bg_plot_123.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "88",
+        "foreground_img": "plots/88_plot_123.png",
+        "background_img": "plots/88_bg_plot_123.png",
+        "animation_start": 98.046875
+    },
+    {
+        "id": "99",
+        "foreground_img": "plots/99_plot_123.png",
+        "background_img": "plots/99_bg_plot_123.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "124",
+        "foreground_img": "plots/124_plot_123.png",
+        "background_img": "plots/124_bg_plot_123.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "135",
+        "foreground_img": "plots/135_plot_123.png",
+        "background_img": "plots/135_bg_plot_123.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "140",
+        "foreground_img": "plots/140_plot_123.png",
+        "background_img": "plots/140_bg_plot_123.png",
+        "animation_start": 96.1218836565097
+    },
+    {
+        "id": "146",
+        "foreground_img": "plots/146_plot_123.png",
+        "background_img": "plots/146_bg_plot_123.png",
+        "animation_start": 99.08814589665654
+    },
+    {
+        "id": "147",
+        "foreground_img": "plots/147_plot_123.png",
+        "background_img": "plots/147_bg_plot_123.png",
+        "animation_start": 99.04306220095694
+    },
+    {
+        "id": "152",
+        "foreground_img": "plots/152_plot_123.png",
+        "background_img": "plots/152_bg_plot_123.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "153",
+        "foreground_img": "plots/153_plot_123.png",
+        "background_img": "plots/153_bg_plot_123.png",
+        "animation_start": 98.23008849557522
+    },
+    {
+        "id": "156",
+        "foreground_img": "plots/156_plot_123.png",
+        "background_img": "plots/156_bg_plot_123.png",
+        "animation_start": 99.60159362549801
+    },
+    {
+        "id": "158",
+        "foreground_img": "plots/158_plot_123.png",
+        "background_img": "plots/158_bg_plot_123.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "161",
+        "foreground_img": "plots/161_plot_123.png",
+        "background_img": "plots/161_bg_plot_123.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "163",
+        "foreground_img": "plots/163_plot_123.png",
+        "background_img": "plots/163_bg_plot_123.png",
+        "animation_start": 99.3723849372385
+    },
+    {
+        "id": "164",
+        "foreground_img": "plots/164_plot_123.png",
+        "background_img": "plots/164_bg_plot_123.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "165",
+        "foreground_img": "plots/165_plot_123.png",
+        "background_img": "plots/165_bg_plot_123.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "167",
+        "foreground_img": "plots/167_plot_123.png",
+        "background_img": "plots/167_bg_plot_123.png",
+        "animation_start": 100.0
+    },
+    {
+        "id": "168",
+        "foreground_img": "plots/168_plot_123.png",
+        "background_img": "plots/168_bg_plot_123.png",
+        "animation_start": 99.79423868312757
+    },
+    {
+        "id": "194",
+        "foreground_img": "plots/194_plot_123.png",
+        "background_img": "plots/194_bg_plot_123.png",
+        "animation_start": 96.58444022770398
+    },
+    {
+        "id": "195",
+        "foreground_img": "plots/195_plot_123.png",
+        "background_img": "plots/195_bg_plot_123.png",
+        "animation_start": 100.0
+    }
+]

@@ -19,6 +19,7 @@ trap "rm -f $LOCKFILE" EXIT
 img_id=$(date +"%S%M%H%d%m%Y")
 rm -rf train_data
 mkdir train_data
+mkdir train_data/north train_data/south
 /home/ec2-user/amtrak-live/.venv/bin/python3 data_collector.py $img_id
 Rscript plot_generator.r $img_id
 cat new_train_img_data.json > train_img_data.json
