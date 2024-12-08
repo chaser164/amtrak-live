@@ -93,7 +93,8 @@ function App() {
               <div className="footer">
         <p>
           Data sourced from <a href="https://github.com/piemadd/amtrak" target="_blank" rel="noopener noreferrer">here</a>. 
-          This site is not affiliated with Amtrak and makes no guarantees for data accuracy.
+          This site is not affiliated with Amtrak and makes no guarantees 
+for data accuracy. Your data is not collected.
         </p>
       </div>
       </div>
