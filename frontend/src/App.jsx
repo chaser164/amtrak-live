@@ -75,6 +75,7 @@ function App() {
     <div className="app-container">
       <div className="train-links">
         <h1><em>Amtrak Live</em></h1>
+        <p>Visualizing Amtrak's Northeast Corridor</p>
         <button
           className="animate-button"
           onClick={() => handleAnimate(currentPlot?.animation_start * 0.885)}
