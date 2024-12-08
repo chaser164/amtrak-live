@@ -19,7 +19,7 @@ r_colors = [
     "chocolate", "tomato", "maroon", "navy", "coral",
     "firebrick", "seagreen", "mediumblue", "dodgerblue", "royalblue",
     "springgreen", "forestgreen", "goldenrod", "hotpink", "deeppink",
-    "mediumvioletred", "midnightblue", "indigo", "violet", "slateblue",
+    "mediumvioletred", "midnightblue", "darkkhaki", "violet", "slateblue",
     "chartreuse", "darkslategrey", "indianred"
 ]
 
