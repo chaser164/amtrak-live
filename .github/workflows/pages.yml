@@ -88,12 +88,12 @@ jobs:
               
               <h2>Example Usage</h2>
               <pre><code>// Fetch train data
-          fetch('https://USERNAME.github.io/REPO/api/trains.json')
-            .then(res => res.json())
-            .then(data => console.log(data));
-          
-          // Image URL example
-          const imageUrl = 'https://USERNAME.github.io/REPO/plots/main_plot_123.png';</code></pre>
+fetch('https://USERNAME.github.io/REPO/api/trains.json')
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+// Image URL example
+const imageUrl = 'https://USERNAME.github.io/REPO/plots/main_plot_123.png';</code></pre>
               
               <h2>CORS</h2>
               <p>All endpoints support CORS and can be accessed from any domain.</p>
