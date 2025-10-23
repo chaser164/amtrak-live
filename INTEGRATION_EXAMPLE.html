@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amtrak Live - Integration Example</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .train-container {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .train-image {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            border-radius: 4px;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+        .error {
+            background: #fee;
+            border: 1px solid #fcc;
+            padding: 15px;
+            border-radius: 4px;
+            color: #c33;
+        }
+    </style>
+</head>
+<body>
+    <h1>Amtrak Live - Integration Example</h1>
+    <p>This example shows how to integrate Amtrak Live data from GitHub Pages into your own website.</p>
+    
+    <div id="trains-container">
+        <div class="loading">Loading train data...</div>
+    </div>
+
+    <script>
+        // ⚠️ REPLACE THESE WITH YOUR ACTUAL VALUES
+        const GITHUB_USERNAME = 'YOUR_USERNAME';
+        const REPO_NAME = 'YOUR_REPO_NAME';
+        const API_BASE = `https://${GITHUB_USERNAME}.github.io/${REPO_NAME}`;
+
+        // For local testing, you can use:
+        // const API_BASE = 'http://localhost:5000';
+
+        async function loadTrainData() {
+            const container = document.getElementById('trains-container');
+            
+            try {
+                // Fetch train data from GitHub Pages
+                const response = await fetch(`${API_BASE}/api/trains.json`);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const trains = await response.json();
+                
+                // Clear loading message
+                container.innerHTML = '';
+                
+                // Create display for each train
+                trains.forEach(train => {
+                    const trainDiv = document.createElement('div');
+                    trainDiv.className = 'train-container';
+                    
+                    const title = document.createElement('h2');
+                    title.textContent = `Train ${train.id}`;
+                    trainDiv.appendChild(title);
+                    
+                    // Background image (full schedule)
+                    const bgDiv = document.createElement('div');
+                    bgDiv.innerHTML = '<h3>Full Schedule</h3>';
+                    const bgImg = document.createElement('img');
+                    bgImg.src = `${API_BASE}/${train.background_img}`;
+                    bgImg.alt = `${train.id} Background Plot`;
+                    bgImg.className = 'train-image';
+                    bgImg.onerror = () => {
+                        bgDiv.innerHTML += '<p class="error">Failed to load background image</p>';
+                    };
+                    bgDiv.appendChild(bgImg);
+                    trainDiv.appendChild(bgDiv);
+                    
+                    // Foreground image (current progress)
+                    const fgDiv = document.createElement('div');
+                    fgDiv.innerHTML = '<h3>Current Progress</h3>';
+                    const fgImg = document.createElement('img');
+                    fgImg.src = `${API_BASE}/${train.foreground_img}`;
+                    fgImg.alt = `${train.id} Foreground Plot`;
+                    fgImg.className = 'train-image';
+                    fgImg.onerror = () => {
+                        fgDiv.innerHTML += '<p class="error">Failed to load foreground image</p>';
+                    };
+                    fgDiv.appendChild(fgImg);
+                    trainDiv.appendChild(fgDiv);
+                    
+                    // Animation info
+                    const info = document.createElement('p');
+                    info.textContent = `Animation start: ${train.animation_start.toFixed(1)}%`;
+                    trainDiv.appendChild(info);
+                    
+                    container.appendChild(trainDiv);
+                });
+                
+                console.log(`Loaded ${trains.length} trains`);
+                
+            } catch (error) {
+                container.innerHTML = `
+                    <div class="error">
+                        <strong>Error loading train data:</strong> ${error.message}<br>
+                        <br>
+                        Make sure to:<br>
+                        1. Replace GITHUB_USERNAME and REPO_NAME in the script<br>
+                        2. Wait for GitHub Actions to run and deploy (may take 3-5 minutes)<br>
+                        3. Check that GitHub Pages is enabled in your repository settings
+                    </div>
+                `;
+                console.error('Error:', error);
+            }
+        }
+
+        // Load data on page load
+        loadTrainData();
+
+        // Auto-refresh every 3 minutes to match update schedule
+        setInterval(loadTrainData, 3 * 60 * 1000);
+    </script>
+
+    <hr style="margin: 40px 0;">
+    
+    <h2>Integration Code</h2>
+    <p>To integrate this into your own website, use this JavaScript code:</p>
+    
+    <pre style="background: #f4f4f4; padding: 15px; border-radius: 4px; overflow-x: auto;"><code>// Set your GitHub Pages URL
+const API_BASE = 'https://YOUR_USERNAME.github.io/YOUR_REPO_NAME';
+
+// Fetch train data
+fetch(`${API_BASE}/api/trains.json`)
+  .then(res => res.json())
+  .then(trains => {
+    trains.forEach(train => {
+      // Use the image URLs directly
+      const backgroundImg = `${API_BASE}/${train.background_img}`;
+      const foregroundImg = `${API_BASE}/${train.foreground_img}`;
+      
+      // Your custom rendering code here
+      console.log(`Train ${train.id}:`, {
+        backgroundImg,
+        foregroundImg,
+        animationStart: train.animation_start
+      });
+    });
+  })
+  .catch(error => console.error('Error:', error));
+</code></pre>
+
+    <h2>API Response Format</h2>
+    <pre style="background: #f4f4f4; padding: 15px; border-radius: 4px; overflow-x: auto;"><code>[
+  {
+    "id": "All Trains",
+    "foreground_img": "plots/main_plot_123456.png",
+    "background_img": "plots/main_bg_plot_123456.png",
+    "animation_start": 100
+  },
+  {
+    "id": "2216",
+    "foreground_img": "plots/2216_plot_123456.png",
+    "background_img": "plots/2216_bg_plot_123456.png",
+    "animation_start": 45.7
+  }
+  // ... more trains
+]</code></pre>
+</body>
+</html>
+

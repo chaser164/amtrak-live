@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# ⚠️ DEPRECATED: This script is now replaced by GitHub Actions
+# See .github/workflows/update-plots.yml for the automated version
+# For local testing, use: ./test_local.sh
+
 LOCKFILE="/tmp/marey_update.lock"
 
 # Check if the lock file exists
