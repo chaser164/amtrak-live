@@ -45,66 +45,40 @@ jobs:
           
       - name: Create index page
         run: |
-          cat > public/index.html << 'HTMLEOF'
+          cat > public/index.html <<'EOF'
           <!DOCTYPE html>
           <html>
           <head>
               <title>Amtrak Live - API</title>
               <meta charset="utf-8">
               <style>
-                  body {
-                      font-family: system-ui, -apple-system, sans-serif;
-                      max-width: 800px;
-                      margin: 40px auto;
-                      padding: 20px;
-                      line-height: 1.6;
-                  }
-                  code {
-                      background: #f4f4f4;
-                      padding: 2px 6px;
-                      border-radius: 3px;
-                  }
-                  pre {
-                      background: #f4f4f4;
-                      padding: 15px;
-                      border-radius: 5px;
-                      overflow-x: auto;
-                  }
+                  body { font-family: system-ui, -apple-system, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+                  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; }
+                  pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
               </style>
           </head>
           <body>
               <h1>Amtrak Live API</h1>
               <p>This API provides real-time Amtrak Northeast Corridor train data and visualizations.</p>
-              
               <h2>Endpoints</h2>
-              
               <h3>Get Train Data</h3>
               <p><code>GET /api/trains.json</code></p>
               <p>Returns JSON array of active trains with their plot images and animation data.</p>
-              
               <h3>Get Plot Images</h3>
               <p><code>GET /plots/FILENAME.png</code></p>
               <p>Access individual plot images.</p>
-              
               <h2>Example Usage</h2>
-              <pre><code>// Fetch train data
-fetch('https://USERNAME.github.io/REPO/api/trains.json')
-  .then(res => res.json())
-  .then(data => console.log(data));
-
-// Image URL example
-const imageUrl = 'https://USERNAME.github.io/REPO/plots/main_plot_123.png';</code></pre>
-              
+              <pre><code>fetch('https://USERNAME.github.io/REPO/api/trains.json')
+            .then(res => res.json())
+            .then(data => console.log(data));</code></pre>
               <h2>CORS</h2>
               <p>All endpoints support CORS and can be accessed from any domain.</p>
-              
               <h2>Update Frequency</h2>
               <p>Data is updated automatically via GitHub Actions.</p>
-              
               <p><a href="https://github.com/YOUR_USERNAME/YOUR_REPO">View on GitHub</a></p>
           </body>
           </html>
-          HTMLEOF
+          EOF
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
