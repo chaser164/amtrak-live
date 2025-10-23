@@ -1,7 +1,7 @@
 import './App.css';
 import { useState, useRef, useEffect } from 'react';
 
-const URL = 'https://amtraklive.com/';
+const URL = 'https://chaser164.github.io/amtrak-live/';
 
 function App() {
   const [hiddenPercent, setHiddenPercent] = useState(0);
@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const fetchTrainData = async () => {
       try {
-        const response = await fetch(URL + 'api/trains/');
+        const response = await fetch(URL + 'api/trains.json');
         const data = await response.json();
         setTrainData(data); // Update state with the received train data
         if (data.length > 0) {
@@ -55,7 +55,7 @@ function App() {
     }
 
     try {
-      const response = await fetch(URL + 'api/trains/');
+      const response = await fetch(URL + 'api/trains.json');
       const data = await response.json();
       setTrainData(data); // Refresh train data
 

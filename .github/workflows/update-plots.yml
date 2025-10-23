@@ -3,7 +3,7 @@ name: Update Amtrak Plots
 on:
   # Run every hour (stays within GitHub free tier of 2,000 min/month)
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 */2 * * *'
   
   # Allow manual trigger
   workflow_dispatch:
