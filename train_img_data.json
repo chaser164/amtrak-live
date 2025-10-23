@@ -1,92 +1,68 @@
 [
     {
         "id": "All Trains",
-        "foreground_img": "plots/main_plot_123.png",
-        "background_img": "plots/main_bg_plot_123.png",
+        "foreground_img": "plots/main_plot_58400323102025.png",
+        "background_img": "plots/main_bg_plot_58400323102025.png",
         "animation_start": 100
     },
     {
         "id": "Northbound",
-        "foreground_img": "plots/north_plot_123.png",
-        "background_img": "plots/north_bg_plot_123.png",
+        "foreground_img": "plots/north_plot_58400323102025.png",
+        "background_img": "plots/north_bg_plot_58400323102025.png",
         "animation_start": 100
     },
     {
         "id": "Southbound",
-        "foreground_img": "plots/south_plot_123.png",
-        "background_img": "plots/south_bg_plot_123.png",
+        "foreground_img": "plots/south_plot_58400323102025.png",
+        "background_img": "plots/south_bg_plot_58400323102025.png",
         "animation_start": 100
     },
     {
-        "id": "2258",
-        "foreground_img": "plots/2258_plot_123.png",
-        "background_img": "plots/2258_bg_plot_123.png",
-        "animation_start": 92.02453987730061
-    },
-    {
-        "id": "2275",
-        "foreground_img": "plots/2275_plot_123.png",
-        "background_img": "plots/2275_bg_plot_123.png",
-        "animation_start": 100.0
-    },
-    {
         "id": "66",
-        "foreground_img": "plots/66_plot_123.png",
-        "background_img": "plots/66_bg_plot_123.png",
-        "animation_start": 98.94459102902374
+        "foreground_img": "plots/66_plot_58400323102025.png",
+        "background_img": "plots/66_bg_plot_58400323102025.png",
+        "animation_start": 98.54881266490766
     },
     {
         "id": "67",
-        "foreground_img": "plots/67_plot_123.png",
-        "background_img": "plots/67_bg_plot_123.png",
+        "foreground_img": "plots/67_plot_58400323102025.png",
+        "background_img": "plots/67_bg_plot_58400323102025.png",
         "animation_start": 100.0
     },
     {
-        "id": "124",
-        "foreground_img": "plots/124_plot_123.png",
-        "background_img": "plots/124_bg_plot_123.png",
-        "animation_start": 99.57446808510639
-    },
-    {
-        "id": "128",
-        "foreground_img": "plots/128_plot_123.png",
-        "background_img": "plots/128_bg_plot_123.png",
+        "id": "93",
+        "foreground_img": "plots/93_plot_58400323102025.png",
+        "background_img": "plots/93_bg_plot_58400323102025.png",
         "animation_start": 100.0
     },
     {
-        "id": "132",
-        "foreground_img": "plots/132_plot_123.png",
-        "background_img": "plots/132_bg_plot_123.png",
+        "id": "136",
+        "foreground_img": "plots/136_plot_58400323102025.png",
+        "background_img": "plots/136_bg_plot_58400323102025.png",
         "animation_start": 100.0
     },
     {
-        "id": "139",
-        "foreground_img": "plots/139_plot_123.png",
-        "background_img": "plots/139_bg_plot_123.png",
+        "id": "176",
+        "foreground_img": "plots/176_plot_58400323102025.png",
+        "background_img": "plots/176_bg_plot_58400323102025.png",
         "animation_start": 100.0
     },
     {
-        "id": "145",
-        "foreground_img": "plots/145_plot_123.png",
-        "background_img": "plots/145_bg_plot_123.png",
+        "id": "177",
+        "foreground_img": "plots/177_plot_58400323102025.png",
+        "background_img": "plots/177_bg_plot_58400323102025.png",
         "animation_start": 100.0
     },
     {
-        "id": "146",
-        "foreground_img": "plots/146_plot_123.png",
-        "background_img": "plots/146_bg_plot_123.png",
-        "animation_start": 87.53117206982543
-    },
-    {
-        "id": "166",
-        "foreground_img": "plots/166_plot_123.png",
-        "background_img": "plots/166_bg_plot_123.png",
-        "animation_start": 90.80234833659492
-    },
-    {
-        "id": "169",
-        "foreground_img": "plots/169_plot_123.png",
-        "background_img": "plots/169_bg_plot_123.png",
+        "id": "178",
+        "foreground_img": "plots/178_plot_58400323102025.png",
+        "background_img": "plots/178_bg_plot_58400323102025.png",
         "animation_start": 100.0
+    },
+    {
+        "id": "179",
+        "foreground_img": "plots/179_plot_58400323102025.png",
+        "background_img": "plots/179_bg_plot_58400323102025.png",
+        "animation_start": 96.5909090909091
     }
 ]
